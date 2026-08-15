@@ -189,4 +189,9 @@ final class RadioModel: ObservableObject {
             Task { await refresh() }
         }
     }
+
+    func stop() {
+        player.pause()
+        isPlaying = false
+    }
 }
